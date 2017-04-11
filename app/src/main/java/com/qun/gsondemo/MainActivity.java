@@ -8,7 +8,7 @@ import com.google.gson.Gson;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTvJsion;
+    private TextView mTvJson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Gson gson = new Gson();
         User user = gson.fromJson(json, User.class);
 //        System.out.println(user.toString());
-        mTvJsion = (TextView) findViewById(R.id.tv_json);
-        mTvJsion.setText(user.toString());
+        mTvJson = (TextView) findViewById(R.id.tv_json);
+        mTvJson.setText(user.toString());
     }
 }
